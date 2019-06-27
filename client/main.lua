@@ -70,7 +70,7 @@ AddEventHandler('esx_status:load', function(status)
 				status = GetStatusData()
 			})
 	
-		TriggerEvent('esx_ladderhud:updateBasics', GetStatusData(true))
+			TriggerEvent('esx_status:onTick', GetStatusData(true))
 	    Citizen.Wait(Config.TickTime)
 	  end
 	end)
